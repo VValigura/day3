@@ -1,6 +1,7 @@
 package qa.demo.tests;
 
 import org.junit.jupiter.api.Test;
+import qa.demo.utils.RandomData;
 
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selectors.byText;
@@ -10,20 +11,26 @@ public class MainDemoQATest extends BaseTest{
 
     @Test
     public void firstDemoQaTest() {
-
-
+        String userFirstName = RandomData.getFirstName(),
+                userLastName = RandomData.getLastName(),
+                userEmail = RandomData.getEmail(),
+                userGender = RandomData.getGender(),
+                userPhoneNumber = RandomData.getPhone(),
+                userSubject = RandomData.getSubject(),
+                userHobbies = RandomData.getHobbies(),
+                userAddress = RandomData.getAddress();
 
         practiceForm.openPage();
-        practiceForm.setFirstName("testFirstName");
-        practiceForm.setLastName("testLastName");
-        practiceForm.setUserEmail("test@user.email");
-        practiceForm.setGender("Male");
-        practiceForm.setUserPhoneNumber("0123456789");
+        practiceForm.setFirstName(userFirstName);
+        practiceForm.setLastName(userLastName);
+        practiceForm.setUserEmail(userEmail);
+        practiceForm.setGender(userGender);
+        practiceForm.setUserPhoneNumber(userPhoneNumber);
         practiceForm.setUserBirthDate("05 June 1991");
-        practiceForm.addUserSubject("English");
-        practiceForm.setUserHobbies("Reading");
+        practiceForm.addUserSubject(userSubject);
+        practiceForm.setUserHobbies(userHobbies);
         practiceForm.uploadUserPicture("image/1.png");
-        practiceForm.setCurrentAddress("Test current address");
+        practiceForm.setCurrentAddress(userAddress);
         practiceForm.selectFirstState();
         practiceForm.selectFirstCity();
         practiceForm.clickSubmitBtn();
