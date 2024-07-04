@@ -1,15 +1,27 @@
 package qa.demo.tests;
 
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.ValueSource;
 import qa.demo.utils.RandomData;
 
-import static com.codeborne.selenide.Condition.text;
-import static com.codeborne.selenide.Selectors.byText;
-import static com.codeborne.selenide.Selenide.*;
+import static com.codeborne.selenide.Selenide.sleep;
 
 public class MainDemoQATest extends BaseTest{
 
+
+
     @Test
+    @DisplayName("Тестирование формы для практики")
+    @Tags({
+            @Tag("BLOCKER"),
+            @Tag("WEB")
+    })
+//    @Disabled("Почему задизейблели")
+//    @ValueSource(strings = {
+//            "Selenide"
+//    })
+//    @ParameterizedTest(name = "скать значение {0}")
     public void firstDemoQaTest() {
         String userFirstName = RandomData.getFirstName(),
                 userLastName = RandomData.getLastName(),
@@ -36,7 +48,5 @@ public class MainDemoQATest extends BaseTest{
         practiceForm.clickSubmitBtn();
 
         practiceForm.checkModalFormIsPresent();
-
-        sleep(3000);
     }
 }
