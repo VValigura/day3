@@ -1,5 +1,6 @@
 package qa.demo.tests;
 
+import io.qameta.allure.*;
 import org.junit.jupiter.api.*;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
@@ -17,11 +18,17 @@ public class MainDemoQATest extends BaseTest{
             @Tag("BLOCKER"),
             @Tag("WEB")
     })
-//    @Disabled("Почему задизейблели")
 //    @ValueSource(strings = {
 //            "Selenide"
 //    })
 //    @ParameterizedTest(name = "скать значение {0}")
+//    allureTags
+    @Feature("Issue в репозитории")
+    @Story("Создание Issue")
+    @Severity(SeverityLevel.BLOCKER)
+    @Owner("Valigura")
+
+
     public void firstDemoQaTest() {
         String userFirstName = RandomData.getFirstName(),
                 userLastName = RandomData.getLastName(),
@@ -48,5 +55,12 @@ public class MainDemoQATest extends BaseTest{
         practiceForm.clickSubmitBtn();
 
         practiceForm.checkModalFormIsPresent();
+    }
+
+
+    @Disabled("Почемуто задизейблели")
+    @Test
+    public void disableTest(){
+        //doNothing
     }
 }
