@@ -9,7 +9,6 @@ import qa.demo.utils.RandomData;
 public class MainRemoteDemoQATest extends BaseRemoteTest{
 
 
-
     @Test
     @DisplayName("Тестирование формы для практики")
     @Tags({

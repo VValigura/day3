@@ -12,7 +12,9 @@ public class Temp {
 
 
         String prop = System.getProperty("prop", "def");
+        System.out.println("++++++++++++++++++++++++++++++++++++");
         System.out.println(prop);
+        System.out.println("++++++++++++++++++++++++++++++++++++");
 
     }
 
