@@ -37,3 +37,5 @@ public class BaseRemoteTest {
         SelenideLogger.addListener("allure", new AllureSelenide());
     }
 }
+
+
