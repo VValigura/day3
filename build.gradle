@@ -35,10 +35,7 @@ dependencies {
     testImplementation 'com.opencsv:opencsv:5.7.1'
     testImplementation 'com.google.code.gson:gson:2.10.1'
     testImplementation  'io.qameta.allure:allure-selenide:2.19.0'
-}
-
-test {
-    useJUnitPlatform()
+    testImplementation  'org.aeonbits.owner:owner:1.0.4'
 
 }
 
@@ -54,6 +51,10 @@ tasks.withType(Test) {
     }
 }
 
+test {
+    useJUnitPlatform()
+
+}
 
 task simple_test(type: Test) {
     useJUnitPlatform {
