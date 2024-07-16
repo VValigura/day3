@@ -1,2 +1,8 @@
-package qa.demo.api.lombok;public class LoginResponseLombokModel {
+package qa.demo.api.lombok;
+
+import lombok.Data;
+
+@Data
+public class LoginResponseLombokModel {
+    String token;
 }
