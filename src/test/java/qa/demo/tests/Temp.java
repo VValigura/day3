@@ -11,10 +11,11 @@ public class Temp {
 //        System.setProperty("prop", "new");
 
 
-        String prop = System.getProperty("prop", "def");
-        System.out.println("++++++++++++++++++++++++++++++++++++");
-        System.out.println(prop);
-        System.out.println("++++++++++++++++++++++++++++++++++++");
+        System.out.println("hello WORLD");
+        System.out.println("hello WORLD");
+        System.out.println("hello WORLD");
+        System.out.println("hello WORLD");
+        System.out.println("hello WORLD");
 
     }
 
