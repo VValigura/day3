@@ -22,7 +22,6 @@ public class MainRemoteDemoQATest extends BaseRemoteTest{
 //    allureTags
     @Feature("Issue в репозитории")
     @Story("Создание Issue")
-    @Severity(SeverityLevel.BLOCKER)
     @Owner("Valigura")
 
 
@@ -50,6 +49,7 @@ public class MainRemoteDemoQATest extends BaseRemoteTest{
         practiceForm.selectFirstState();
         practiceForm.selectFirstCity();
         practiceForm.clickSubmitBtn();
+
 
         practiceForm.checkModalFormIsPresent();
     }

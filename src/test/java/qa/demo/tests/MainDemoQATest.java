@@ -25,7 +25,6 @@ public class MainDemoQATest extends BaseTest{
 //    allureTags
     @Feature("Issue в репозитории")
     @Story("Создание Issue")
-    @Severity(SeverityLevel.BLOCKER)
     @Owner("Valigura")
 
 

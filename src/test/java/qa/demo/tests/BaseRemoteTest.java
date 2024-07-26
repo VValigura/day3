@@ -30,7 +30,7 @@ public class BaseRemoteTest {
 
         Configuration.browser = config.getBrowser();
         Configuration.browserVersion = config.getBrowserVersion();
-        Configuration.remote = "https://user1:1234@selenoid.autotests.cloud/wd/hub";
+        Configuration.remote = "http://localhost:4444/wd/hub";
 
     }
 
